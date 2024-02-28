@@ -41,7 +41,7 @@ Esse é um resumo geral do projeto que utiliza AWS SAM, DynamoDB, API Gateway e 
 ```
 
 # Criar roles
-  -Dynamodb segmentadas
+  - Dynamodb segmentadas
 
 
 
