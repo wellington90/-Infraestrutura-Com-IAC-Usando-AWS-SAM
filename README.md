@@ -31,7 +31,8 @@ Esse é um resumo geral do projeto que utiliza AWS SAM, DynamoDB, API Gateway e 
 
 
 
-# ferramenta para testes Postaman
+# ferramenta para testes 
+  - Postaman
 
 ```bash
 {
@@ -39,7 +40,8 @@ Esse é um resumo geral do projeto que utiliza AWS SAM, DynamoDB, API Gateway e 
 }
 ```
 
-# Criar roles Dynamodb segmentadas
+# Criar roles
+  -Dynamodb segmentadas
 
 
 
