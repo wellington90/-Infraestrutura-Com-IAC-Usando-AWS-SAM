@@ -1,0 +1,70 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  My-project
+
+  Sample SAM Template for My-project
+
+Globals:
+  Function:
+    Timeout: 3
+    MemorySize: 128
+
+Resources:
+  MyDynamoDBTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: my_table
+      AttributeDefinitions:
+        - AttributeName: id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: id
+          KeyType: HASH
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
+
+
+
+  CreateFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: functions/create/app.lambda_handler
+      Runtime: python3.11
+      Events:
+        CreateEvent:
+          Type: Api
+          Properties:
+            Path: /create
+            Method: post
+      Policies:
+        - AmazonDynamoDBFullAccess
+
+  GetFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: functions/get/app.lambda_handler
+      Runtime: python3.11
+      Events:
+        GetEvent:
+          Type: Api
+          Properties:
+            Path: /get/{id}
+            Method: get
+      Policies:
+        - AmazonDynamoDBFullAccess
+
+  ListFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: functions/list/app.lambda_handler
+      Runtime: python3.11
+      Events:
+        ListEvent:
+          Type: Api
+          Properties:
+            Path: /list
+            Method: get
+      Policies:
+        - AmazonDynamoDBFullAccess
