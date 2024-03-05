@@ -1,11 +1,11 @@
 ## Resumo do Projeto - Sistema CRUD com AWS SAM, DynamoDB, API Gateway e Lambda Python:
 
-1. **Descrição do Projeto:**
+**Descrição do Projeto:**
     - O projeto consiste em criar um sistema CRUD (Create, Read, Update, Delete) usando AWS SAM (Serverless Application Model), AWS DynamoDB como banco de dados, AWS Lambda para funções serverless e API Gateway para expor endpoints RESTful.
 
-
-     ![ API CRUD com o Lambda e o DynamoDB](https://docs.aws.amazon.com/pt_br/apigateway/latest/developerguide/images/ddb-crud.png)
-
+<p align="center">
+  <img src="https://docs.aws.amazon.com/pt_br/apigateway/latest/developerguide/images/ddb-crud.png" alt="Descrição da imagem">
+</p>
 
 1. **Tecnologias Utilizadas:**
     - AWS SAM: Para facilitar a criação e implantação de aplicativos serverless.
